@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple phone app with calendar, weather, and calculator functionalities.">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/icon" href="/img/icon1.png"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Link to external CSS file -->
+
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then((registration) => {
+              console.log(
+                "ServiceWorker registration successful:",
+                registration
+              );
+            })
+            .catch((error) => {
+              console.log("ServiceWorker registration failed:", error);
+            });
+        });
+      }
+    </script>
+    <title>d.mike</title>
+  </head>
+
+  <body>
+    <div class="background"></div>
+    <div class="wrapper">
+    <div class="phone">
+      <div class="screen home-screen">
+        <div class="status-bar">
+          <span id="current-time" class="time"></span>
+          <div class="camera-icon">
+            <div class="camera-lens"></div>
+          </div>
+          <div class="status-icons">
+            <span class="material-icons">do_not_disturb_on</span>
+            <span class="material-icons">signal_cellular_alt</span>
+            <span id="battery-percentage">100%</span>
+            <span class="material-icons">battery_6_bar</span>
+          </div>
+        </div>
+        <h1 class="h1">Mike</h1>
+        <p class="p">Smile 😊</p>
+
+        
+
+        <div id="calendar-display">
+          <h3 id="current-date"></h3>
+          <div id="calendar"></div>
+        </div>
+        <div id="weather-widget">
+          <h3>Weather</h3>           
+          <div id="weather-info"></div>
+        </div>
+      </div>
+      
+
+      <div class="screen apps-screen" style="display: none">
+        <div class="status-bar">
+          <span id="current-time-apps" class=" "></span>
+          <div class="camera-icon">
+            <div class="camera-lens"></div>
+          </div>
+          <div class="status-icons">
+            <span class="material-icons">do_not_disturb_on</span>
+            <span class="material-icons">signal_cellular_alt</span>
+            <span id="battery-percentage">100%</span>
+            <span class="material-icons">battery_6_bar</span>
+          </div>
+        </div>
+        <h1>Apps</h1>
+        <div class="app-icons">
+          <div class="app-icon" id="calendar-app">
+            <span class="material-icons">calendar_today</span>
+          </div>
+          <div id="phone-app" class="app-icon">
+            <span class="material-icons">phone</span>
+          </div>
+          <div id="calculator-app" class="app-icon">
+            <span class="material-icons">calculate</span>
+        </div>
+        
+          <div id="messages-app" class="app-icon">
+            <span class="material-icons">message</span>
+          </div>
+          <div id="contacts-app" class="app-icon">
+            <span class="material-icons">contacts</span>
+          </div>
+          <div id="settings-app" class="app-icon">
+            <span class="material-icons">settings</span>
+          </div>
+          <div id="chrome-app" class="app-icon">
+            <span class="material-icons">public</span> <!-- Browser icon -->
+        </div>
+        
+        
+        </div>
+      </div>
+      <div id="phone-screen" class="app-screen hidden">
+        <div class="app-header">
+          <h2>Phone Dialer</h2>
+          <span class="close-app">&times;</span>
+        </div>
+        <div class="dial-display" id="dial-display">0</div>
+        <div class="dial-pad">
+          <div class="dial-row">
+            <button class="dial-button" data-number="1">1</button>
+            <button class="dial-button" data-number="2">2</button>
+            <button class="dial-button" data-number="3">3</button>
+          </div>
+          <div class="dial-row">
+            <button class="dial-button" data-number="4">4</button>
+            <button class="dial-button" data-number="5">5</button>
+            <button class="dial-button" data-number="6">6</button>
+          </div>
+          <div class="dial-row">
+            <button class="dial-button" data-number="7">7</button>
+            <button class="dial-button" data-number="8">8</button>
+            <button class="dial-button" data-number="9">9</button>
+          </div>
+          <div class="dial-row">
+            <button class="dial-button" data-number="*">*</button>
+            <button class="dial-button" data-number="0">0</button>
+            <button class="dial-button" data-number="#">#</button>
+          </div>
+          <div class="dial-row">
+            <button id="clear-button">Clear</button>
+          </div>
+        </div>
+      </div>
+      
+
+      <div id="messages-screen" class="app-screen hidden">
+        <div class="app-header">
+            <h2>Messages</h2>
+            <span class="close-app">&times;</span>
+        </div>
+        <div id="message-display">No messages yet.</div>
+        <div class="message-input">
+            <input type="text" id="new-message" placeholder="Type a message..." />
+            <button id="send-button">Send</button>
+        </div>
+      </div>
+      <div id="contacts-screen" class="app-screen hidden">
+        <div class="app-header">
+          <h2>Contacts</h2>
+          <span class="close-app">&times;</span>
+        </div>
+        <div id="contact-list">Contact list is empty.</div>
+      </div>
+
+      <div id="settings-screen" class="app-screen hidden">
+        <div class="app-header">
+            <h2>Settings</h2>
+            <span class="close-app">&times;</span>
+        </div>
+        <div id="settings-options">
+            <h3>General</h3>
+            <label>
+                <input type="checkbox" id="notifications-toggle" checked>
+                Enable Notifications
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="dark-mode-toggle">
+                Dark Mode
+            </label>
+            <br>
+            <h3>About</h3>
+            <p>Version: 1.0.0</p>
+            <p>© 2024 d.mike</p>
+        </div>
+    </div>
+    
+      
+
+      <div id="calendar-screen" class="app-screen hidden">
+        <div class="app-header">
+          <h2>Calendar</h2>
+          <span class="close-app">&times;</span>
+        </div>
+        <div id="calendar">
+          <table>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="current-day">1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+              <td>30</td>
+              <td>31</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="phone-screen" class="app-screen hidden">
+        <div class="app-header">
+            <h2>Phone Dialer</h2>
+            <span class="close-app">&times;</span>
+        </div>
+        <div class="dial-display" id="dial-display">0</div>
+        <div class="dial-pad">
+            <div class="dial-row">
+                <button class="dial-button" data-number="1">1</button>
+                <button class="dial-button" data-number="2">2</button>
+                <button class="dial-button" data-number="3">3</button>
+            </div>
+            <div class="dial-row">
+                <button class="dial-button" data-number="4">4</button>
+                <button class="dial-button" data-number="5">5</button>
+                <button class="dial-button" data-number="6">6</button>
+            </div>
+            <div class="dial-row">
+                <button class="dial-button" data-number="7">7</button>
+                <button class="dial-button" data-number="8">8</button>
+                <button class="dial-button" data-number="9">9</button>
+            </div>
+            <div class="dial-row">
+                <button class="dial-button" data-number="*">*</button>
+                <button class="dial-button" data-number="0">0</button>
+                <button class="dial-button" data-number="#">#</button>
+            </div>
+            <div class="dial-row">
+                <button id="clear-button" class="dial-button">C</button>
+                <button id="call-button" class="dial-button">Call</button>
+            </div>
+        </div>
+    </div>
+    
+    
+<!--apps here-->
+
+      <div id="chrome-screen" class="app-screen hidden">
+        <div class="app-header">
+          <h2>Chrome</h2>
+          <span class="close-app">&times;</span>
+        </div>
+        <div class="browser-display" id="browser-display">
+          <input type="text" id="url-input" placeholder="Search Google" />
+          <button id="go-button">Go</button>
+          <div id="web-content">
+            <!-- Placeholder for displaying web content -->
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="buttons">
+        <button id="back-button" class="nav-button">
+          <span class="material-icons">arrow_back_ios_new</span>
+        </button>
+        <button id="home-button" class="home-btn"></button>
+        <button id="apps-button" class="nav-button">
+          <span class="material-icons">apps</span>
+        </button>
+      </div>
+    </div>
+    </div>
+  
+
+
+    
+    <script src="/js/script.js"></script>
+  </body>
+</html>
