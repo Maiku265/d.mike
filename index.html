@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A simple phone app with calendar, weather, and calculator functionalities.">
 <meta name="theme-color" content="#ffffff">
-<link rel="shortcut icon" type="image/icon" href="/img/icon1.png"/>
+<link rel="shortcut icon" type="image/icon" href="img/icon1.png"/>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -14,23 +14,6 @@
     <!-- Link to external CSS file -->
 
     <link rel="manifest" href="manifest.json" />
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("sw.js")
-            .then((registration) => {
-              console.log(
-                "ServiceWorker registration successful:",
-                registration
-              );
-            })
-            .catch((error) => {
-              console.log("ServiceWorker registration failed:", error);
-            });
-        });
-      }
-    </script>
     <title>d.mike</title>
   </head>
 
@@ -317,6 +300,6 @@
 
 
     
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
