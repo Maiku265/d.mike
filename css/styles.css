@@ -402,3 +402,37 @@ label {
     display: block;
     margin: 10px 0;
 }
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+    .phone {
+        width: 90%; /* Responsive width */
+        height: auto;
+    }
+
+    .status-bar {
+        padding: 2px; /* Adjust padding */
+    }
+
+    .time, .time-app {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    button {
+        margin: 10px; /* Adjust margin */
+        font-size: 14px; /* Smaller button text */
+    }
+
+    .app-icons div {
+        width: 50px; /* Smaller app icon size */
+        height: 50px; /* Smaller app icon size */
+    }
+
+    .dial-button {
+        padding: 15px; /* Smaller padding for buttons */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    #url-input {
+        width: 100%; /* Full width for input */
+    }
+}
