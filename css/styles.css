@@ -51,6 +51,7 @@ body {
     overflow: hidden; /* Hide overflow for a clean look */
     cursor: pointer;
     margin-left: 5px;
+    padding: 50px;
 }
 
 .screen {
