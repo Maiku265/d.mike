@@ -407,6 +407,12 @@ label {
     .phone {
         width: 90%; /* Responsive width */
         height: 90%;
+        margin: 0 auto;
+    }
+    .wrapper {
+        height: 90%; /* Adjust height for smaller screens */
+        width: 90%; /* Use more width on smaller screens */
+        margin: 0 auto; /* Center the wrapper */
     }
 
     .status-bar {
