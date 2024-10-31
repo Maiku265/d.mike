@@ -446,7 +446,7 @@ label {
     }
 }
 
-@media (min-width: 468px) {
+@media (max-width: 468px) {
     .phone {
         width: 80%; /* Responsive width */
         height: 80%;
