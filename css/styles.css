@@ -405,8 +405,8 @@ label {
 /* Media Queries for small screens */
 @media (max-width: 768px) {
     .phone {
-        width: 90%; /* Responsive width */
-        height: auto;
+        width: 70%; /* Responsive width */
+        height: 80vh;
     }
 
     .status-bar {
@@ -418,13 +418,13 @@ label {
     }
 
     button {
-        margin: 10px; /* Adjust margin */
-        font-size: 14px; /* Smaller button text */
+        margin: 5px; /* Adjust margin */
+        font-size: 8px; /* Smaller button text */
     }
 
     .app-icons div {
-        width: 50px; /* Smaller app icon size */
-        height: 50px; /* Smaller app icon size */
+        width: 40px; /* Smaller app icon size */
+        height: 40px; /* Smaller app icon size */
     }
 
     .dial-button {
