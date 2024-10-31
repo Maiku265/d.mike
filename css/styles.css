@@ -411,6 +411,7 @@ label {
         height: 100vh;
         overflow: hidden;
         margin: 50px;
+        padding-top: 40px;
     }
     .phone {
         width: 90%; /* Responsive width */
