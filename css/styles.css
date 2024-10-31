@@ -6,6 +6,7 @@ body {
     margin: 0;
     overflow: hidden;
 }
+
 .background {
     position: absolute;
     top: 0;
@@ -15,8 +16,9 @@ body {
     z-index: -1;
     animation: slide 12s infinite;
     background-repeat: no-repeat;
-   background-size: cover;
+    background-size: cover;
 }
+
 @keyframes slide {
     0% { background-image: url('../img/img2.jpg'); }
     25% { background-image: url('../img/img3.jpg'); }
@@ -29,38 +31,41 @@ body {
 
 .wrapper {
     background-color: #1c9105;
-    height: 750px;
-    width: 375px;
+    height: 750px; /* You might want to adjust this */
+    width: 375px; /* You might want to adjust this */
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(94, 44, 44, 0.5);
 }
+
 .h1, p {
     text-align: center;
     font-weight: 600;
 }
+
 .phone {
     background-image: url(../img/bg.jpg);
     background-position: fill;
     background-repeat: no-repeat;
-    width: 360px; /* A54 screen width */
-    height: 740px; /* A54 screen height */
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 375px; /* Max width for larger screens */
+    height: auto; /* Adjust height for responsive design */
     border: 3px solid #000;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
     position: relative;
-    overflow: hidden; /* Hide overflow for a clean look */
+    overflow: hidden;
     cursor: pointer;
-    margin-left: 5px;
+    margin: 5px auto; /* Centering */
 }
 
 .screen {
     padding: 4px;
     height: calc(100% - 70px);
-    border-radius: 30px; /* Rounded screen edges */
+    border-radius: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content */
+    align-items: center;
 }
 
 .status-bar {
@@ -71,7 +76,7 @@ body {
     padding: 4px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Make the status bar full width */
+    width: 100%;
     z-index: 1000;
 }
 
@@ -80,11 +85,11 @@ body {
     font-weight: bold;
     margin-left: 30px;
 }
+
 .time-app {
     font-size: 14px;
     font-weight: bold;
     margin-left: 30px;
-    
 }
 
 .status-icons {
@@ -187,7 +192,6 @@ button:hover {
 }
 
 /* Apps side */
-
 .app-screen {
     display: none; 
     background-color: #fff;
@@ -222,6 +226,7 @@ button:hover {
     color: white; 
     border-radius: 5px; 
 }
+
 .dial-display {
     font-size: 24px;
     margin-bottom: 20px;
@@ -270,6 +275,7 @@ button:hover {
     width: 50px; 
     height: auto; 
 }
+
 .browser-display {
     margin-top: 20px;
 }
@@ -358,6 +364,7 @@ button:hover {
     background-color: #d0d0d0; 
     transform: scale(1.05); 
 }
+
 .message-input {
     display: flex;
     margin-top: 10px;
@@ -381,6 +388,7 @@ button:hover {
     padding: 10px;
     background-color: #f9f9f9; 
 }
+
 #settings-screen {
     background-color: #fff;
     padding: 20px;
@@ -401,4 +409,45 @@ button:hover {
 label {
     display: block;
     margin: 10px 0;
+}
+
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+    .wrapper {
+        height: auto; /* Adjust height for smaller screens */
+        width: 90%; /* Use more width on smaller screens */
+        margin: 0 auto; /* Center the wrapper */
+    }
+
+    .phone {
+        width: 90%; /* Responsive width */
+        height: auto; /* Auto height */
+    }
+
+    .status-bar {
+        padding: 2px; /* Adjust padding */
+    }
+
+    .time, .time-app {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    button {
+        margin: 10px; /* Adjust margin */
+        font-size: 14px; /* Smaller button text */
+    }
+
+    .app-icons div {
+        width: 50px; /* Smaller app icon size */
+        height: 50px; /* Smaller app icon size */
+    }
+
+    .dial-button {
+        padding: 15px; /* Smaller padding for buttons */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    #url-input {
+        width: 100%; /* Full width for input */
+    }
 }
