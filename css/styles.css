@@ -94,30 +94,31 @@ body {
 }
 
 .status-bar .material-icons {
-    font-size: 15px; /* Adjust icon size */
-    margin-left: 5px; /* Space between icons */
+    font-size: 15px; 
+    margin-left: 5px; 
     z-index: 1000;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-between; /* Space between buttons */
+    justify-content: space-between; 
     height: 50px;
-    border-radius: 0 0 40px 40px; /* Rounded bottom corners */
-    position: absolute; /* Position at the bottom */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Make it full width */
-    padding: 0 10px; /* Add some padding */
+    border-radius: 0 0 40px 40px; 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    padding: 0 10px; 
     z-index: 1000;
+    margin-left: auto;
 }
 
 button {
     margin: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center content */
+    justify-content: center;
     border: none;
-    color: white; /* Button text color */
+    color: white; 
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -130,7 +131,7 @@ button:hover {
     width: 20px; 
     height: 20px;
     background-color: transparent;
-    border: 2px solid #f8fafc;
+    border: 2px solid #202830;
     border-radius: 5px;
 }
 
@@ -162,46 +163,46 @@ button:hover {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    color: white; /* Text color */
+    color: white; 
 }
 
 .camera-icon {
-    width: 24px; /* Adjust size as needed */
+    width: 24px; 
     height: 24px;
-    background-color: #333; /* Circle color */
-    border-radius: 50%; /* Make it a circle */
+    background-color: #000000; 
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the dot */
+    align-items: center;
     z-index: 999;
     position: fixed;
 }
 
 .camera-lens {
-    width: 6px; /* Dot size */
+    width: 5px; 
     height: 6px;
-    background-color: #fff; /* Dot color */
-    border-radius: 50%; /* Make it a circle */
+    background-color: #fff; 
+    border-radius: 50%; 
     position: fixed;
 }
 
 /* Apps side */
 
 .app-screen {
-    display: none; /* Hide by default */
+    display: none; 
     background-color: #fff;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    position: absolute; /* Position it on the phone */
-    top: 50px; /* Position below the status bar */
+    position: absolute; 
+    top: 50px; 
     left: 0;
     right: 0;
-    bottom: 0; /* Fill available space */
+    bottom: 0; 
     padding: 20px;
 }
 
 .hidden {
-    display: none; /* Utility class to hide elements */
+    display: none; 
 }
 
 .app-header {
@@ -217,9 +218,9 @@ button:hover {
 }
 
 .current-day {
-    background-color: #007bff; /* Highlight color for the current day */
-    color: white; /* Text color for the highlighted day */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 5px; 
 }
 .dial-display {
     font-size: 24px;
@@ -240,41 +241,41 @@ button:hover {
 
 .dial-row {
     display: flex;
-    justify-content: space-between; /* Space buttons evenly */
+    justify-content: space-between; 
     margin-bottom: 10px;
 }
 
 .dial-button {
-    flex: 1; /* Make buttons grow equally */
+    flex: 1; 
     padding: 20px;
     font-size: 20px;
-    background-color: #e0e0e0; /* Default button color */
+    background-color: #e0e0e0; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 5px; /* Spacing between buttons */
+    margin: 0 5px; 
 }
 
 #clear-button {
-    background-color: #f44336; /* Red for clear */
+    background-color: #f44336;
     color: white;
 }
 
 #call-button {
-    background-color: #4CAF50; /* Green for call */
+    background-color: #4CAF50; 
     color: white;
 }
 
 .app-icon {
-    width: 50px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 50px; 
+    height: auto; 
 }
 .browser-display {
     margin-top: 20px;
 }
 
 #url-input {
-    width: 80%; /* Adjust width as needed */
+    width: 80%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -294,7 +295,7 @@ button:hover {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    overflow: hidden; /* Hide overflow for iframe */
+    overflow: hidden; 
 }
 
 #calendar-display, #weather-widget {
@@ -311,7 +312,6 @@ button:hover {
     text-align: center;
 }
 
-/* Overall calculator screen styles */
 #calculator-screen {
     display: flex;
     flex-direction: column;
@@ -320,7 +320,7 @@ button:hover {
     margin-right: 5px;
 }
 
-/* Calculator display styles */
+/* Calc disp styles */
 .calculator-display {
     font-size: 36px;
     background-color: #fff;
@@ -329,34 +329,34 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
-    width: 100%; /* Make the display occupy full width */
+    width: 100%; 
 }
 
 /* Calculator buttons container */
 .calculator-buttons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-    gap: 5px; /* Space between buttons */
-    width: 90%; /* Ensure it occupies full width */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px; 
+    width: 90%; 
 }
 
 /* Button styles */
 .calc-button {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     padding: 15px;
     font-size: 20px;
     background-color: #e0e0e0;
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
 }
 
 .calc-button:hover {
-    background-color: #d0d0d0; /* Darker on hover */
-    transform: scale(1.05); /* Slight scale on hover */
+    background-color: #d0d0d0; 
+    transform: scale(1.05); 
 }
 .message-input {
     display: flex;
@@ -379,7 +379,7 @@ button:hover {
     border: 1px solid #ccc;
     margin-top: 10px;
     padding: 10px;
-    background-color: #f9f9f9; /* Light background for messages */
+    background-color: #f9f9f9; 
 }
 #settings-screen {
     background-color: #fff;
