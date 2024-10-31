@@ -404,10 +404,13 @@ label {
 }
 /* Media Queries for small screens */
 @media (max-width: 768px) {
+    body {
+        margin: 30px;
+    }
     .phone {
-        margin-top: 15px;
         width: 90%; /* Responsive width */
         height: 90%;
+        margin: 0 auto;
     }
     .background{
         height: auto;
