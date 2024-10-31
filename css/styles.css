@@ -415,7 +415,7 @@ label {
         margin: auto;
     }
     .wrapper {
-        display: none;
+        background: transparent;
     }
 
     .status-bar {
