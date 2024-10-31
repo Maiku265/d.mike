@@ -404,10 +404,9 @@ label {
 }
 /* Media Queries for small screens */
 @media (max-width: 768px) {
-    body {
-        padding: auto;
-    }
+    
     .phone {
+        padding: 50px;
         width: 90%; /* Responsive width */
         height: 90%;
         margin: 0 auto;
