@@ -405,8 +405,12 @@ label {
 /* Media Queries for small screens */
 @media (max-width: 768px) {
     body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
         margin: 50px;
-        height: 70vh;
     }
     .phone {
         width: 90%; /* Responsive width */
