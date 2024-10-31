@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 20px;
     overflow: hidden;
 }
 .background {
@@ -51,8 +51,6 @@ body {
     overflow: hidden; /* Hide overflow for a clean look */
     cursor: pointer;
     margin-left: 5px;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .screen {
