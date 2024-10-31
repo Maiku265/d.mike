@@ -409,6 +409,11 @@ label {
         height: 90%;
         margin: 0 auto;
     }
+    .background{
+        height: auto;
+        width: auto;
+        margin: auto;
+    }
     .wrapper {
         height: 90%; /* Adjust height for smaller screens */
         width: 90%; /* Use more width on smaller screens */
