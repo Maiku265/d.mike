@@ -405,51 +405,9 @@ label {
 /* Media Queries for small screens */
 @media (max-width: 768px) {
     .phone {
+        padding-top: 15px;
         width: 90%; /* Responsive width */
         height: 90%;
-        margin: 0 auto;
-    }
-    .background{
-        height: auto;
-        width: auto;
-        margin: auto;
-    }
-    .wrapper {
-        background-color: transparent;
-    }
-
-    .status-bar {
-        padding: 2px; /* Adjust padding */
-    }
-
-    .time, .time-app {
-        font-size: 12px; /* Smaller font size */
-    }
-
-    button {
-        margin: 3px; /* Adjust margin */
-        font-size: 8px; /* Smaller button text */
-    }
-
-    .app-icons div {
-        width: 40px; /* Smaller app icon size */
-        height: 40px; /* Smaller app icon size */
-    }
-
-    .dial-button {
-        padding: 8px; /* Smaller padding for buttons */
-        font-size: 10px; /* Smaller font size */
-    }
-
-    #url-input {
-        width: 100%; /* Full width for input */
-    }
-}
-
-@media (max-width: 468px) {
-    .phone {
-        width: 80%; /* Responsive width */
-        height: 80%;
         margin: 0 auto;
     }
     .background{
