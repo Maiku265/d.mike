@@ -39,7 +39,7 @@ body {
     font-weight: 600;
 }
 .phone {
-    background-image: url(img/bg.jpg);
+    background-image: url(../img/bg.jpg);
     background-position: fill;
     background-repeat: no-repeat;
     width: 360px; /* A54 screen width */
