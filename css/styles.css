@@ -415,9 +415,7 @@ label {
         margin: auto;
     }
     .wrapper {
-        height: 90%; /* Adjust height for smaller screens */
-        width: 90%; /* Use more width on smaller screens */
-        margin: 0 auto; /* Center the wrapper */
+        display: none;
     }
 
     .status-bar {
@@ -429,7 +427,7 @@ label {
     }
 
     button {
-        margin: 5px; /* Adjust margin */
+        margin: 3px; /* Adjust margin */
         font-size: 8px; /* Smaller button text */
     }
 
@@ -439,8 +437,8 @@ label {
     }
 
     .dial-button {
-        padding: 15px; /* Smaller padding for buttons */
-        font-size: 16px; /* Smaller font size */
+        padding: 8px; /* Smaller padding for buttons */
+        font-size: 10px; /* Smaller font size */
     }
 
     #url-input {
