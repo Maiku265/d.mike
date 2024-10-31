@@ -18,13 +18,13 @@ body {
    background-size: cover;
 }
 @keyframes slide {
-    0% { background-image: url('img/img2.jpg'); }
-    25% { background-image: url('img/img3.jpg'); }
-    33% { background-image: url('img/img2.jpg'); }
-    58% { background-image: url('img/img3.jpg'); }
-    67% { background-image: url('img/img2.jpg'); }
-    92% { background-image: url('img/img3.jpg'); }
-    100% { background-image: url('img/img2.jpg'); }
+    0% { background-image: url('../img/img2.jpg'); }
+    25% { background-image: url('../img/img3.jpg'); }
+    33% { background-image: url('../img/img2.jpg'); }
+    58% { background-image: url('../img/img3.jpg'); }
+    67% { background-image: url('../img/img2.jpg'); }
+    92% { background-image: url('../img/img3.jpg'); }
+    100% { background-image: url('../img/img2.jpg'); }
 }
 
 .wrapper {
